@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="docs/images/logo.png" alt="SentinelAI Logo" width="200"/>
-</p>
 
 <h1 align="center">SentinelAI</h1>
 <p align="center">
@@ -79,10 +76,6 @@ docker-compose up -d
 docker-compose exec backend python scripts/seed_database.py
 ```
 
-**Access the application:**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Docs: http://localhost:8000/docs
 
 ### Local Development
 
