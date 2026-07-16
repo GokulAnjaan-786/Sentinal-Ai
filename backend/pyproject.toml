@@ -1,0 +1,26 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+asyncio_mode = "auto"
+markers = [
+    "unit: Unit tests (fast, no external dependencies)",
+    "integration: Integration tests (may require database)",
+    "ml: ML pipeline tests (may be slow)",
+    "slow: Slow-running tests",
+]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["app"]
+omit = [
+    "tests/*",
+    "scripts/*",
+    "__pycache__/*",
+    "*.pyc",
+]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 70
